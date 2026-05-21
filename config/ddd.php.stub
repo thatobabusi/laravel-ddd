@@ -113,11 +113,15 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Autoload Ignore Folders
+    | PSR-4 Autoload Ignore Folders
     |--------------------------------------------------------------------------
     |
-    | Folders that should be skipped during autoloading discovery,
-    | relative to the root of each domain.
+    | Folders that should be excluded from PSR-4 class scanning
+    | (auto-discovery of providers, commands, policies, factories,
+    | and listeners), relative to the root of each domain.
+    |
+    | This does not affect migration path discovery, which is controlled
+    | separately by the autoload.migrations option above.
     |
     | e.g., src/Domain/Invoicing/<folder-to-ignore>
     |

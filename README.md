@@ -5,6 +5,14 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/jaspertey/laravel-ddd/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/jaspertey/laravel-ddd/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/tey/laravel-ddd.svg?style=flat-square)](https://packagist.org/packages/tey/laravel-ddd)
 
+> [!IMPORTANT]
+> **Upgrading from `lunarstorm/laravel-ddd` v2?** First update to v2.1.2, then run `ddd:upgrade`:
+> ```bash
+> composer require lunarstorm/laravel-ddd:"^2.1.2"
+> php artisan ddd:upgrade
+> ```
+> See [UPGRADING](UPGRADING.md) for full details.
+
 Laravel-DDD is a toolkit to support domain driven design (DDD) in Laravel applications. One of the pain points when adopting DDD is the inability to use Laravel's native `make` commands to generate objects outside the `App\*` namespace. This package aims to fill the gaps by providing equivalent commands such as `ddd:model`, `ddd:dto`, `ddd:view-model` and many more.
 
 ## Installation
@@ -48,6 +56,7 @@ In production, ensure you run `php artisan ddd:optimize` during the deployment p
  11.x           | 1.x        |
  11.44.x        | 2.x        |
  12.x           | 2.x        |
+ 11.x - 13.x    | 3.x        |
 
 See **[UPGRADING](UPGRADING.md)** for more details about upgrading across different versions.
 
@@ -403,15 +412,16 @@ This is opt-in and disabled by default:
 ```
 When enabled, any listener class within the domain layer that handles a specific event — via the `handle()` method or the `#[ListensTo]` attribute — will be automatically registered with Laravel's event dispatcher. Classes that implement a `subscribe()` method (event subscribers) are also detected and registered via `Event::subscribe()`.
 
-### Ignoring Paths During Autoloading
-To specify folders or paths that should be skipped during autoloading class discovery, add them to the `ddd.autoload_ignore` configuration option. By default, the `Tests` and `Migrations` folders are ignored.
+### Ignoring Paths During PSR-4 Class Scanning
+To specify folders that should be excluded from PSR-4 class scanning, add them to the `ddd.autoload_ignore` configuration option. By default, the `Tests` and `Database/Migrations` folders are excluded.
 ```php
 'autoload_ignore' => [
     'Tests',
     'Database/Migrations',
 ],
 ```
-Note that ignoring folders only applies to class-based autoloading: Service Providers, Console Commands, Policies, and Factories.
+> [!NOTE]
+> This setting only affects PSR-4 class scanning (i.e., auto-discovery of Service Providers, Console Commands, Policies, Factories, and Listeners). It has no effect on migration path discovery, which uses a separate mechanism driven by `ddd.autoload.migrations`.
 
 Paths specified here are relative to the root of each domain. e.g., `src/Domain/Invoicing/{path-to-ignore}`. If more advanced filtering is needed, a callback can be registered using `DDD::filterAutoloadPathsUsing(callback $filter)` in your AppServiceProvider's boot method:
 ```php
@@ -607,11 +617,15 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Autoload Ignore Folders
+    | PSR-4 Autoload Ignore Folders
     |--------------------------------------------------------------------------
     |
-    | Folders that should be skipped during autoloading discovery,
-    | relative to the root of each domain.
+    | Folders that should be excluded from PSR-4 class scanning
+    | (auto-discovery of providers, commands, policies, factories,
+    | and listeners), relative to the root of each domain.
+    |
+    | This does not affect migration path discovery, which is controlled
+    | separately by the autoload.migrations option above.
     |
     | e.g., src/Domain/Invoicing/<folder-to-ignore>
     |
