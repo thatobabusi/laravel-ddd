@@ -4,7 +4,10 @@ All notable changes to `laravel-ddd` will be documented in this file.
 
 ## [3.0.1] - 2026-05-22
 ### Changed
-- `ddd:upgrade` now uses `DDD::config()->syncWithLatest()->save()` for consistent config upgrade logic.
+- `ddd:upgrade` now delegates config upgrade to `DDD::config()->syncWithLatest()->save()` instead of duplicating the logic inline.
+
+### Removed
+- Dropped legacy 0.x config upgrade compatibility from `ddd:upgrade`.
 
 ## [3.0.0] - 2026-05-20
 ### Changed
