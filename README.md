@@ -5,14 +5,6 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/jaspertey/laravel-ddd/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/jaspertey/laravel-ddd/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/tey/laravel-ddd.svg?style=flat-square)](https://packagist.org/packages/tey/laravel-ddd)
 
-> [!IMPORTANT]
-> **Upgrading from `lunarstorm/laravel-ddd` v2?** First update to v2.1.2, then run `ddd:upgrade`:
-> ```bash
-> composer require lunarstorm/laravel-ddd:"^2.1.2"
-> php artisan ddd:upgrade
-> ```
-> See [UPGRADING](UPGRADING.md) for full details.
-
 Laravel-DDD is a toolkit to support domain driven design (DDD) in Laravel applications. One of the pain points when adopting DDD is the inability to use Laravel's native `make` commands to generate objects outside the `App\*` namespace. This package aims to fill the gaps by providing equivalent commands such as `ddd:model`, `ddd:dto`, `ddd:view-model` and many more.
 
 ## Installation
@@ -21,6 +13,14 @@ You can install the package via composer:
 ```bash
 composer require tey/laravel-ddd
 ```
+
+> [!IMPORTANT]
+> **Upgrading from `lunarstorm/laravel-ddd` v2?** First update to v2.1.2, then run `ddd:upgrade`:
+> ```bash
+> composer require lunarstorm/laravel-ddd:"^2.1.2"
+> php artisan ddd:upgrade
+> ```
+> See [UPGRADING](UPGRADING.md) for full details.
 
 You may initialize the package using the `ddd:install` artisan command. This will publish the [config file](#config-file), register the domain path in your project's composer.json psr-4 autoload configuration on your behalf, and allow you to publish generator stubs for customization if needed.
 ```bash
