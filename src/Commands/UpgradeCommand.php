@@ -122,5 +122,4 @@ class UpgradeCommand extends Command
 
         $this->components->info('Configuration upgraded successfully.');
     }
-
 }
