@@ -1,0 +1,36 @@
+<?php
+
+namespace {{ namespace }};
+
+/**
+ * {{ class }} Mapper
+ *
+ * Responsible for mapping data between Infrastructure (Eloquent) models
+ * and Domain entities. Converts DTOs to Domain objects and vice versa.
+ */
+class {{ class }}
+{
+    /**
+     * Map from Eloquent model to Domain entity
+     */
+    public function toDomain(/* $eloquentModel */)
+    {
+        // Example:
+        // return new DomainEntity(
+        //     id: $eloquentModel->id,
+        //     name: $eloquentModel->name,
+        // );
+    }
+
+    /**
+     * Map from Domain entity to Eloquent model (array format for create/update)
+     */
+    public function toEloquent(/* $domainEntity */): array
+    {
+        // Example:
+        // return [
+        //     'name' => $domainEntity->name,
+        //     'email' => $domainEntity->email,
+        // ];
+    }
+}

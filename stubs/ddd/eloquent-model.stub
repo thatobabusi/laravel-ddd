@@ -1,0 +1,21 @@
+<?php
+
+namespace {{ namespace }};
+
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+
+/**
+ * {{ class }} Eloquent Model
+ *
+ * This model lives in the Infrastructure layer and handles database persistence.
+ * It should not be used directly within the Domain layer.
+ */
+class {{ class }} extends Model
+{
+    use HasFactory;
+
+    protected $fillable = [
+        //
+    ];
+}

@@ -1,0 +1,51 @@
+<?php
+
+namespace {{ namespace }};
+
+// use App\Models\User;
+// use Domain\YourDomain\Models\YourEntity;
+
+/**
+ * {{ class }} Policy
+ *
+ * Domain authorization policy for business rule enforcement.
+ * Determines who can perform actions within the domain.
+ */
+class {{ class }}
+{
+    /**
+     * Determine if user can view the resource
+     */
+    public function view(/* User $user, YourEntity $entity */): bool
+    {
+        // return $user->id === $entity->user_id || $user->isAdmin();
+        return true;
+    }
+
+    /**
+     * Determine if user can create the resource
+     */
+    public function create(/* User $user */): bool
+    {
+        // return $user->isVerified();
+        return true;
+    }
+
+    /**
+     * Determine if user can update the resource
+     */
+    public function update(/* User $user, YourEntity $entity */): bool
+    {
+        // return $user->id === $entity->user_id && !$entity->isLocked();
+        return true;
+    }
+
+    /**
+     * Determine if user can delete the resource
+     */
+    public function delete(/* User $user, YourEntity $entity */): bool
+    {
+        // return $user->id === $entity->user_id && $user->isVerified();
+        return true;
+    }
+}

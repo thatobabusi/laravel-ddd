@@ -1,0 +1,45 @@
+<?php
+
+namespace {{ namespace }};
+
+use Illuminate\Support\ServiceProvider;
+
+/**
+ * {{ class }} Provider
+ *
+ * Service provider for the domain. Binds abstractions to implementations
+ * in the Laravel service container. Register this provider in config/app.php.
+ */
+class {{ class }} extends ServiceProvider
+{
+    /**
+     * Register domain services
+     *
+     * Bind repository interfaces to implementations, repository interfaces to concrete
+     * repository classes, and any other domain-level bindings.
+     */
+    public function register(): void
+    {
+        // Example:
+        // $this->app->bind(
+        //     \Domain\YourDomain\Contracts\YourRepositoryInterface::class,
+        //     \Domain\YourDomain\Application\Repositories\YourRepository::class
+        // );
+    }
+
+    /**
+     * Bootstrap domain services
+     *
+     * Load routes, migrations, or perform other bootstrap operations.
+     */
+    public function boot(): void
+    {
+        // Example (if routes are defined):
+        // if (file_exists(base_path('routes/your-domain.php'))) {
+        //     $this->loadRoutesFrom(base_path('routes/your-domain.php'));
+        // }
+
+        // Example (if migrations exist):
+        // $this->loadMigrationsFrom(__DIR__ . '/../../database/migrations');
+    }
+}

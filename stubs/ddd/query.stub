@@ -1,0 +1,32 @@
+<?php
+
+namespace {{ namespace }};
+
+/**
+ * {{ class }} Query
+ *
+ * Query that retrieves domain data without modifying state.
+ * Queries should be idempotent and never have side effects.
+ * They are typically triggered by read requests or data lookups.
+ */
+class {{ class }}
+{
+    /**
+     * Create a new query instance
+     */
+    public function __construct(
+        // Add filtering/criteria parameters here
+    ) {}
+
+    /**
+     * Execute the query
+     *
+     * This method should be called by a QueryHandler in the Application layer
+     * and should return the requested data.
+     */
+    public function handle()
+    {
+        // Implement query logic here
+        // Return the requested data
+    }
+}

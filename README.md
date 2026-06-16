@@ -15,6 +15,23 @@ php artisan ddd:install
 php artisan ddd:config wizard
 ```
 
+## Scaffold a Bounded-Context (New!)
+
+Generate a complete domain structure with all layers:
+
+```bash
+php artisan ddd:make:domain UserManagement
+php artisan ddd:eloquent-model UserManagement:User
+php artisan ddd:repository UserManagement:UserRepository
+php artisan ddd:mapper UserManagement:UserMapper
+php artisan ddd:policy UserManagement:UserPolicy
+php artisan ddd:provider UserManagement:UserManagementServiceProvider
+php artisan ddd:command-query UserManagement:CreateUserCommand
+php artisan ddd:command-query UserManagement:GetUserQuery --query
+```
+
+See [Scaffolding Guide](docs/SCAFFOLDING.md) for complete workflow.
+
 ## Documentation
 
 Complete documentation is organized into focused guides:
@@ -26,6 +43,7 @@ Complete documentation is organized into focused guides:
 ### Using the Toolkit
 - [Available Commands](docs/COMMANDS.md) — Reference for all `ddd:*` generators.
 - [Advanced Usage](docs/ADVANCED_USAGE.md) — Nested objects, subdomains, custom resolvers, application layers.
+- [Scaffolding & Domain Structure](docs/SCAFFOLDING.md) — Bounded-contexts, layered architecture, CQRS patterns. **NEW!**
 
 ### Building with DDD
 - [Real-World Examples](docs/EXAMPLES.md) — Complete working domains (Invoicing, Payment, testing).
@@ -51,6 +69,9 @@ Complete documentation is organized into focused guides:
 
 - ✅ Generate domain objects outside `App\*` with `ddd:*` commands.
 - ✅ Support for nested objects and subdomains (dot notation).
+- ✅ Scaffold bounded-contexts with all four layers (`Domain`, `Application`, `Presentation`, `Infrastructure`).
+- ✅ Generate Eloquent models, mappers, repositories, policies, and service providers.
+- ✅ CQRS support: Commands and Queries with dedicated generators.
 - ✅ Configurable application layer (controllers, requests, middleware).
 - ✅ Custom layers (Infrastructure, Integrations, etc).
 - ✅ Auto-discovery of providers, commands, policies, factories, migrations, listeners.
@@ -68,34 +89,38 @@ Complete documentation is organized into focused guides:
 
 See [UPGRADING](UPGRADING.md) for migration details.
 
-## Example: Invoicing Domain
+## Example: Complete Domain
 
 ```bash
-# Generate domain structure
-php artisan ddd:model Invoicing:Invoice -m
+# Scaffold bounded-context
+php artisan ddd:make:domain Invoicing
+
+# Generate infrastructure layer
+php artisan ddd:eloquent-model Invoicing:Invoice -m
+php artisan ddd:eloquent-model Invoicing:LineItem -m
+php artisan ddd:repository Invoicing:InvoiceRepository
+php artisan ddd:mapper Invoicing:InvoiceMapper
+
+# Generate application layer
+php artisan ddd:command-query Invoicing:CreateInvoiceCommand
+php artisan ddd:command-query Invoicing:GetInvoiceQuery --query
+
+# Generate domain layer
 php artisan ddd:value Invoicing:DollarAmount
-php artisan ddd:action Invoicing:CreateInvoice
+php artisan ddd:policy Invoicing:InvoicePolicy
 php artisan ddd:event Invoicing:InvoiceCreated
 php artisan ddd:listener Invoicing:HandleInvoiceCreated
+
+# Bind everything
+php artisan ddd:provider Invoicing:InvoicingServiceProvider
 ```
 
-```php
-// app/Modules/Invoicing/Controllers/InvoiceController.php
-class InvoiceController
-{
-    public function store(Request $request, CreateInvoice $action)
-    {
-        $invoice = $action->execute($request->validated());
-        return response()->json($invoice);
-    }
-}
-```
-
-See [Real-World Examples](docs/EXAMPLES.md) for full working examples.
+See [Real-World Examples](docs/EXAMPLES.md) and [Scaffolding Guide](docs/SCAFFOLDING.md) for full working examples.
 
 ## Credits
 
 - [Jasper Tey](https://github.com/JasperTey)
+- [Orphail DDD Inspiration](https://github.com/Orphail/laravel-ddd)
 - [All Contributors](../../contributors)
 
 ## License

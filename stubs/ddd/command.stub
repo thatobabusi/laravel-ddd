@@ -1,0 +1,30 @@
+<?php
+
+namespace {{ namespace }};
+
+/**
+ * {{ class }} Command
+ *
+ * Command that modifies domain state. Commands always have side effects
+ * and should rarely return values. They are typically triggered by
+ * application events or user actions.
+ */
+class {{ class }}
+{
+    /**
+     * Create a new command instance
+     */
+    public function __construct(
+        // Add parameters here
+    ) {}
+
+    /**
+     * Execute the command
+     *
+     * This method should be called by a CommandHandler in the Application layer.
+     */
+    public function handle()
+    {
+        // Implement command logic here
+    }
+}

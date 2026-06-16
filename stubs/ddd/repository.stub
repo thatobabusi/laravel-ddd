@@ -1,0 +1,59 @@
+<?php
+
+namespace {{ namespace }};
+
+// use Tey\LaravelDDD\Application\Contracts\RepositoryInterface;
+// use Infrastructure\Models\YourEloquentModel;
+
+/**
+ * {{ class }} Repository
+ *
+ * Implementation of the {{ class }}Interface.
+ * Handles all database interactions using Eloquent.
+ */
+class {{ class }} // implements {{ class }}Interface
+{
+    // public function __construct(private YourEloquentModel $model) {}
+
+    /**
+     * Get all records
+     */
+    public function all()
+    {
+        // return $this->model->all();
+    }
+
+    /**
+     * Find by ID
+     */
+    public function findById(int $id)
+    {
+        // return $this->model->findOrFail($id);
+    }
+
+    /**
+     * Create new record
+     */
+    public function create(array $data)
+    {
+        // return $this->model->create($data);
+    }
+
+    /**
+     * Update record
+     */
+    public function update(int $id, array $data)
+    {
+        // $record = $this->findById($id);
+        // $record->update($data);
+        // return $record;
+    }
+
+    /**
+     * Delete record
+     */
+    public function delete(int $id): bool
+    {
+        // return (bool) $this->findById($id)->delete();
+    }
+}
