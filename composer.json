@@ -1,19 +1,19 @@
 {
-    "name": "tey/laravel-ddd",
+    "name": "thatobabusi/laravel-ddd",
     "description": "A Laravel toolkit for Domain Driven Design patterns",
     "keywords": [
-        "tey",
+        "thatobabusi",
         "laravel",
         "laravel-ddd",
         "ddd",
         "domain driven design"
     ],
-    "homepage": "https://github.com/jaspertey/laravel-ddd",
+    "homepage": "https://github.com/thatobabusi/laravel-ddd",
     "license": "MIT",
     "authors": [
         {
-            "name": "Jasper Tey",
-            "email": "jasper@jtey.com",
+            "name": "Thato Babusi",
+            "email": "thatobabusi@yahoo.com",
             "role": "Developer"
         }
     ],
@@ -45,13 +45,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Tey\\LaravelDDD\\": "src",
-            "Tey\\LaravelDDD\\Database\\Factories\\": "database/factories"
+            "Laravel\\LaravelDDD\\": "src",
+            "Laravel\\LaravelDDD\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Tey\\LaravelDDD\\Tests\\": "tests",
+            "Laravel\\LaravelDDD\\Tests\\": "tests",
             "App\\": "vendor/orchestra/testbench-core/laravel/app",
             "Database\\Factories\\": "vendor/orchestra/testbench-core/laravel/database/factories",
             "Database\\Seeders\\": "vendor/orchestra/testbench-core/laravel/database/seeders",
@@ -79,10 +79,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Tey\\LaravelDDD\\LaravelDDDServiceProvider"
+                "Laravel\\LaravelDDD\\LaravelDDDServiceProvider"
             ],
             "aliases": {
-                "DDD": "Tey\\LaravelDDD\\Facades\\DDD"
+                "DDD": "Laravel\\LaravelDDD\\Facades\\DDD"
             }
         }
     },

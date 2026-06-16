@@ -1,6 +1,6 @@
 <?php
 
-namespace Tey\LaravelDDD\Commands;
+namespace Laravel\LaravelDDD\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Foundation\Events\PublishingStubs;
@@ -8,8 +8,8 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
-use Tey\LaravelDDD\Facades\DDD;
-use Tey\LaravelDDD\Support\Path;
+use Laravel\LaravelDDD\Facades\DDD;
+use Laravel\LaravelDDD\Support\Path;
 
 use function Laravel\Prompts\multisearch;
 use function Laravel\Prompts\select;

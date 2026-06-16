@@ -1,11 +1,11 @@
 <?php
 
-namespace Tey\LaravelDDD\Commands;
+namespace Laravel\LaravelDDD\Commands;
 
 use Illuminate\Console\Command;
-use Tey\LaravelDDD\Support\Domain;
-use Tey\LaravelDDD\Support\DomainResolver;
-use Tey\LaravelDDD\Support\Path;
+use Laravel\LaravelDDD\Support\Domain;
+use Laravel\LaravelDDD\Support\DomainResolver;
+use Laravel\LaravelDDD\Support\Path;
 
 use function Laravel\Prompts\table;
 

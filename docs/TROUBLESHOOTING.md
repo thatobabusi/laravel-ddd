@@ -81,6 +81,6 @@ See [UPGRADING](../UPGRADING.md) for details.
 ## Getting Help
 
 1. Check [FAQ](FAQ.md).
-2. Search [GitHub Issues](https://github.com/jaspertey/laravel-ddd/issues).
+2. Search [GitHub Issues](https://github.com/thatobabusi/laravel-ddd/issues).
 3. Review [UPGRADING](../UPGRADING.md) if upgrading versions.
 4. Report issues with Laravel version, LaravelDDD version, and reproduction steps.

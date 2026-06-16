@@ -2,7 +2,7 @@
 
 namespace Domain\Invoicing\Models;
 
-use Tey\LaravelDDD\Models\DomainModel;
+use Laravel\LaravelDDD\Models\DomainModel;
 
 class Invoice extends DomainModel
 {

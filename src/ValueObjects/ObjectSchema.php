@@ -1,6 +1,6 @@
 <?php
 
-namespace Tey\LaravelDDD\ValueObjects;
+namespace Laravel\LaravelDDD\ValueObjects;
 
 class ObjectSchema
 {

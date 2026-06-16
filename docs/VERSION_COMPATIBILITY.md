@@ -17,7 +17,7 @@ Requires Laravel 11.x or 12.x+.
 
 **Steps:**
 1. Update Laravel to 11.44.x+
-2. Update `composer.json`: `composer require tey/laravel-ddd:^3.0`
+2. Update `composer.json`: `composer require thatobabusi/laravel-ddd:^4.0`
 3. Run upgrade: `php artisan ddd:upgrade`
 4. Run config update: `php artisan ddd:config update`
 

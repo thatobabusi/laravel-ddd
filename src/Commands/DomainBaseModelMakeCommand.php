@@ -1,9 +1,9 @@
 <?php
 
-namespace Tey\LaravelDDD\Commands;
+namespace Laravel\LaravelDDD\Commands;
 
 use Symfony\Component\Console\Input\InputArgument;
-use Tey\LaravelDDD\Commands\Concerns\HasDomainStubs;
+use Laravel\LaravelDDD\Commands\Concerns\HasDomainStubs;
 
 class DomainBaseModelMakeCommand extends DomainGeneratorCommand
 {

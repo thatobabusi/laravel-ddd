@@ -1,9 +1,9 @@
 <?php
 
-namespace Tey\LaravelDDD\Commands;
+namespace Laravel\LaravelDDD\Commands;
 
 use Illuminate\Console\Command;
-use Tey\LaravelDDD\Support\DomainCache;
+use Laravel\LaravelDDD\Support\DomainCache;
 
 class OptimizeClearCommand extends Command
 {

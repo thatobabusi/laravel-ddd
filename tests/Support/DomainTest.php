@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Config;
-use Tey\LaravelDDD\Support\Domain;
-use Tey\LaravelDDD\Support\Path;
+use Laravel\LaravelDDD\Support\Domain;
+use Laravel\LaravelDDD\Support\Path;
 
 it('can initialize a domain', function ($domainName, $subdomainName) {
     $domain = new Domain($domainName, $subdomainName);

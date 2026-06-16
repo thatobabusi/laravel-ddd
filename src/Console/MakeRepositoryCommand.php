@@ -1,6 +1,6 @@
 <?php
 
-namespace Tey\LaravelDDD\Console;
+namespace Laravel\LaravelDDD\Console;
 
 use Illuminate\Console\GeneratorCommand;
 
@@ -27,7 +27,7 @@ class MakeRepositoryCommand extends GeneratorCommand
         // Also create the interface
         $name = $this->qualifyClass($this->getNameInput());
         $interface = str_replace('Repositories', 'Contracts', $name).'Interface';
-        
+
         $this->call('make:class', [
             'name' => str_replace('\\', '/', $interface),
         ]);

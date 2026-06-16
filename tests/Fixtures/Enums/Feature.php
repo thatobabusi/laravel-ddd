@@ -1,6 +1,6 @@
 <?php
 
-namespace Tey\LaravelDDD\Tests\Fixtures\Enums;
+namespace Laravel\LaravelDDD\Tests\Fixtures\Enums;
 
 enum Feature: string
 {

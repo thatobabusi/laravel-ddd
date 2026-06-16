@@ -1,10 +1,10 @@
 <?php
 
-namespace Tey\LaravelDDD;
+namespace Laravel\LaravelDDD;
 
-use Tey\LaravelDDD\Support\AutoloadManager;
-use Tey\LaravelDDD\Support\GeneratorBlueprint;
-use Tey\LaravelDDD\Support\Path;
+use Laravel\LaravelDDD\Support\AutoloadManager;
+use Laravel\LaravelDDD\Support\GeneratorBlueprint;
+use Laravel\LaravelDDD\Support\Path;
 
 class DomainManager
 {

@@ -1,6 +1,6 @@
 <?php
 
-use Tey\LaravelDDD\Tests\TestCase;
+use Laravel\LaravelDDD\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);
 

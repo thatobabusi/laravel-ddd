@@ -1,6 +1,6 @@
 <?php
 
-namespace Tey\LaravelDDD\Console;
+namespace Laravel\LaravelDDD\Console;
 
 use Illuminate\Console\GeneratorCommand;
 

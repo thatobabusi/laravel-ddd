@@ -1,12 +1,12 @@
 <?php
 
-namespace Tey\LaravelDDD\Factories;
+namespace Laravel\LaravelDDD\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
-use Tey\LaravelDDD\Support\DomainResolver;
-use Tey\LaravelDDD\ValueObjects\DomainObject;
+use Laravel\LaravelDDD\Support\DomainResolver;
+use Laravel\LaravelDDD\ValueObjects\DomainObject;
 
 abstract class DomainFactory extends Factory
 {

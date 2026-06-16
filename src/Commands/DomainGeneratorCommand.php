@@ -1,12 +1,12 @@
 <?php
 
-namespace Tey\LaravelDDD\Commands;
+namespace Laravel\LaravelDDD\Commands;
 
 use Illuminate\Console\GeneratorCommand;
 use Illuminate\Support\Str;
-use Tey\LaravelDDD\Commands\Concerns\InteractsWithStubs;
-use Tey\LaravelDDD\Commands\Concerns\ResolvesDomainFromInput;
-use Tey\LaravelDDD\Support\DomainResolver;
+use Laravel\LaravelDDD\Commands\Concerns\InteractsWithStubs;
+use Laravel\LaravelDDD\Commands\Concerns\ResolvesDomainFromInput;
+use Laravel\LaravelDDD\Support\DomainResolver;
 
 abstract class DomainGeneratorCommand extends GeneratorCommand
 {

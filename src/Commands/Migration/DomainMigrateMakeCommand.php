@@ -1,9 +1,9 @@
 <?php
 
-namespace Tey\LaravelDDD\Commands\Migration;
+namespace Laravel\LaravelDDD\Commands\Migration;
 
-use Tey\LaravelDDD\Commands\Concerns\ResolvesDomainFromInput;
-use Tey\LaravelDDD\Support\Path;
+use Laravel\LaravelDDD\Commands\Concerns\ResolvesDomainFromInput;
+use Laravel\LaravelDDD\Support\Path;
 
 class DomainMigrateMakeCommand extends BaseMigrateMakeCommand
 {

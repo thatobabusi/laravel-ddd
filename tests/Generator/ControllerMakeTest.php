@@ -3,8 +3,8 @@
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\File;
-use Tey\LaravelDDD\Support\Path;
-use Tey\LaravelDDD\Tests\Fixtures\Enums\Feature;
+use Laravel\LaravelDDD\Support\Path;
+use Laravel\LaravelDDD\Tests\Fixtures\Enums\Feature;
 
 beforeEach(function () {
     $this->cleanSlate();

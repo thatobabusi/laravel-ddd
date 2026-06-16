@@ -138,7 +138,7 @@ See [GitHub Releases](https://github.com/jaspertey/laravel-ddd/releases) for v3.
 
 ### Installation
 ```bash
-composer require tey/laravel-ddd:^4.0
+composer require thatobabusi/laravel-ddd:^4.0
 php artisan ddd:install
 ```
 
@@ -150,7 +150,7 @@ No additional configuration needed. All commands auto-register.
 
 **Step 1:** Install v4
 ```bash
-composer require tey/laravel-ddd:^4.0
+composer require thatobabusi/laravel-ddd:^4.0
 ```
 
 **Step 2:** Run existing commands (they work unchanged)

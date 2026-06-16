@@ -1,9 +1,9 @@
 <?php
 
-namespace Tey\LaravelDDD\Commands\Concerns;
+namespace Laravel\LaravelDDD\Commands\Concerns;
 
 use Illuminate\Support\Str;
-use Tey\LaravelDDD\Facades\DDD;
+use Laravel\LaravelDDD\Facades\DDD;
 
 trait HasDomainStubs
 {

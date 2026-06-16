@@ -1,8 +1,8 @@
 <?php
 
-namespace Tey\LaravelDDD\ValueObjects;
+namespace Laravel\LaravelDDD\ValueObjects;
 
-use Tey\LaravelDDD\Support\DomainResolver;
+use Laravel\LaravelDDD\Support\DomainResolver;
 
 class DomainNamespaces
 {

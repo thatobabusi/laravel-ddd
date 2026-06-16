@@ -1,8 +1,8 @@
 <?php
 
-use Tey\LaravelDDD\Commands\ConfigCommand;
-use Tey\LaravelDDD\Facades\DDD;
-use Tey\LaravelDDD\Tests\BootsTestApplication;
+use Laravel\LaravelDDD\Commands\ConfigCommand;
+use Laravel\LaravelDDD\Facades\DDD;
+use Laravel\LaravelDDD\Tests\BootsTestApplication;
 
 uses(BootsTestApplication::class);
 

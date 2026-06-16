@@ -1,5 +1,5 @@
 <?php
 
-namespace Tey\LaravelDDD\Tests;
+namespace Laravel\LaravelDDD\Tests;
 
 trait BootsTestApplication {}

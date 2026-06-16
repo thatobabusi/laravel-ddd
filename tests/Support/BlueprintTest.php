@@ -1,6 +1,6 @@
 <?php
 
-use Tey\LaravelDDD\Support\GeneratorBlueprint;
+use Laravel\LaravelDDD\Support\GeneratorBlueprint;
 
 beforeEach(function () {
     config()->set([

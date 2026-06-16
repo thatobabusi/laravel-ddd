@@ -1,6 +1,6 @@
 <?php
 
-namespace Tey\LaravelDDD\Console;
+namespace Laravel\LaravelDDD\Console;
 
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
@@ -147,7 +147,7 @@ class MakeFeatureCommand extends Command
 
         $this->call('ddd:controller', ['name' => "{$folder}/{$prefix}Action", '--invokable' => true]);
         $this->call('ddd:use-case', ['name' => "{$folder}/{$prefix}"]);
-        
+
         if ($answers['service_input_dto']) {
             $this->call('ddd:dto', ['name' => "{$folder}/Input/{$prefix}ServiceInput"]);
         }

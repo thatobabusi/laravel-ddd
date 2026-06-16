@@ -1,29 +1,25 @@
 <?php
 
-namespace Tey\LaravelDDD;
+namespace Laravel\LaravelDDD;
 
 use Illuminate\Database\Migrations\MigrationCreator;
 use Illuminate\Support\Facades\Event;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Tey\LaravelDDD\Facades\Autoload;
-use Tey\LaravelDDD\Listeners\MigrationsPrunedSubscriber;
-use Tey\LaravelDDD\Support\AutoloadManager;
-use Tey\LaravelDDD\Support\DomainMigration;
+use Laravel\LaravelDDD\Facades\Autoload;
+use Laravel\LaravelDDD\Listeners\MigrationsPrunedSubscriber;
+use Laravel\LaravelDDD\Support\AutoloadManager;
+use Laravel\LaravelDDD\Support\DomainMigration;
 
 class LaravelDDDServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
-        /*
-         * This class is a Package Service Provider
-         *
-         * More info: https://github.com/spatie/laravel-package-tools
-         */
         $package
             ->name('laravel-ddd')
             ->hasConfigFile()
             ->hasCommands([
+                // ── Core / Config ───────────────────────────────────────────
                 Commands\InstallCommand::class,
                 Commands\ConfigCommand::class,
                 Commands\PublishCommand::class,
@@ -32,6 +28,8 @@ class LaravelDDDServiceProvider extends PackageServiceProvider
                 Commands\OptimizeCommand::class,
                 Commands\OptimizeClearCommand::class,
                 Commands\DomainListCommand::class,
+
+                // ── Original Domain Generators ───────────────────────────────
                 Commands\DomainModelMakeCommand::class,
                 Commands\DomainFactoryMakeCommand::class,
                 Commands\DomainBaseModelMakeCommand::class,
@@ -64,18 +62,19 @@ class LaravelDDDServiceProvider extends PackageServiceProvider
                 Commands\DomainSeederMakeCommand::class,
                 Commands\DomainTraitMakeCommand::class,
                 Commands\Migration\DomainMigrateMakeCommand::class,
-                Commands\MakeDomainCommand::class,
-                Commands\MakeEloquentModelCommand::class,
-                Commands\MakeMapperCommand::class,
-                Commands\MakeRepositoryCommand::class,
-                Commands\MakePolicyCommand::class,
-                Commands\MakeDomainServiceProviderCommand::class,
-                Commands\MakeCommandQueryCommand::class,
-                Commands\MakeFeatureCommand::class,
-                Commands\DomainUseCaseMakeCommand::class,
-                Commands\DomainResponseMakeCommand::class,
-                Commands\DomainServiceMakeCommand::class,
-                Commands\DomainActionMakeCommand::class,
+
+                // ── New: Scaffolding & Feature Wizard (v4.0.0) ──────────────
+                Commands\MakeDomainCommand::class,          // ddd:make:domain
+                Commands\MakeEloquentModelCommand::class,   // ddd:eloquent-model
+                Commands\MakeMapperCommand::class,          // ddd:mapper
+                Commands\MakeRepositoryCommand::class,      // ddd:repository
+                Commands\MakePolicyCommand::class,          // ddd:policy (domain-level, different from DomainPolicyMakeCommand)
+                Commands\MakeDomainServiceProviderCommand::class, // ddd:provider
+                Commands\MakeCommandQueryCommand::class,    // ddd:command-query
+                Commands\MakeFeatureCommand::class,         // ddd:make:feature (Feature Wizard)
+                Commands\DomainUseCaseMakeCommand::class,   // ddd:use-case
+                Commands\DomainResponseMakeCommand::class,  // ddd:response
+                Commands\DomainServiceMakeCommand::class,   // ddd:service
             ]);
 
         if ($this->app->runningUnitTests()) {
@@ -97,9 +96,6 @@ class LaravelDDDServiceProvider extends PackageServiceProvider
             ->give(fn () => $this->app->basePath('stubs'));
 
         $this->app->singleton(Commands\Migration\DomainMigrateMakeCommand::class, function ($app) {
-            // Once we have the migration creator registered, we will create the command
-            // and inject the creator. The creator is responsible for the actual file
-            // creation of the migrations, and may be extended by these developers.
             $creator = $app['migration.creator'];
             $composer = $app['composer'];
 

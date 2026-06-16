@@ -2,7 +2,7 @@
 
 namespace {{ namespace }};
 
-// use Tey\LaravelDDD\Application\Contracts\RepositoryInterface;
+// use Laravel\LaravelDDD\Application\Contracts\RepositoryInterface;
 // use Infrastructure\Models\YourEloquentModel;
 
 /**

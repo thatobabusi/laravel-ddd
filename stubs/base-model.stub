@@ -2,7 +2,7 @@
 
 namespace {{ namespace }};
 
-use Tey\LaravelDDD\Factories\HasDomainFactory;
+use Laravel\LaravelDDD\Factories\HasDomainFactory;
 use Illuminate\Database\Eloquent\Model;
 
 abstract class {{ class }} extends Model

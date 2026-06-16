@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Config;
-use Tey\LaravelDDD\Support\DomainResolver;
+use Laravel\LaravelDDD\Support\DomainResolver;
 
 it('can customize the domain path via ddd.domain_path', function () {
     $path = fake()->word();

@@ -1,10 +1,10 @@
 <?php
 
-namespace Tey\LaravelDDD\Commands;
+namespace Laravel\LaravelDDD\Commands;
 
 use Illuminate\Console\Command;
-use Tey\LaravelDDD\Facades\Autoload;
-use Tey\LaravelDDD\Support\DomainMigration;
+use Laravel\LaravelDDD\Facades\Autoload;
+use Laravel\LaravelDDD\Support\DomainMigration;
 
 class OptimizeCommand extends Command
 {

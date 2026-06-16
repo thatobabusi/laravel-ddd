@@ -1,11 +1,11 @@
 <?php
 
-namespace Tey\LaravelDDD;
+namespace Laravel\LaravelDDD;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Process;
 use Symfony\Component\VarExporter\VarExporter;
-use Tey\LaravelDDD\Facades\DDD;
+use Laravel\LaravelDDD\Facades\DDD;
 
 class ConfigManager
 {

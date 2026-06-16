@@ -32,9 +32,9 @@ Register a custom resolver for advanced naming conventions:
 
 ```php
 // In AppServiceProvider::boot()
-use Tey\LaravelDDD\Facades\DDD;
-use Tey\LaravelDDD\ValueObjects\CommandContext;
-use Tey\LaravelDDD\ValueObjects\ObjectSchema;
+use Laravel\LaravelDDD\Facades\DDD;
+use Laravel\LaravelDDD\ValueObjects\CommandContext;
+use Laravel\LaravelDDD\ValueObjects\ObjectSchema;
 
 DDD::resolveObjectSchemaUsing(function (
     string $domainName,

@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Config;
-use Tey\LaravelDDD\Support\DomainResolver;
-use Tey\LaravelDDD\Support\Path;
+use Laravel\LaravelDDD\Support\DomainResolver;
+use Laravel\LaravelDDD\Support\Path;
 
 beforeEach(function () {
     Config::set('ddd.domain_path', 'src/Domain');

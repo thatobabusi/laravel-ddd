@@ -1,6 +1,6 @@
 <?php
 
-namespace Tey\LaravelDDD\Support;
+namespace Laravel\LaravelDDD\Support;
 
 use Closure;
 use Illuminate\Console\Application as ConsoleApplication;
@@ -21,9 +21,9 @@ use Mockery;
 use ReflectionClass;
 use Symfony\Component\Finder\Finder;
 use Symfony\Component\Finder\SplFileInfo;
-use Tey\LaravelDDD\Facades\DDD;
-use Tey\LaravelDDD\Factories\DomainFactory;
-use Tey\LaravelDDD\ValueObjects\DomainObject;
+use Laravel\LaravelDDD\Facades\DDD;
+use Laravel\LaravelDDD\Factories\DomainFactory;
+use Laravel\LaravelDDD\ValueObjects\DomainObject;
 use Throwable;
 
 class AutoloadManager

@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\File;
-use Tey\LaravelDDD\Support\DomainCache;
+use Laravel\LaravelDDD\Support\DomainCache;
 
 beforeEach(function () {
     $cacheDirectory = config('ddd.cache_directory', 'bootstrap/cache/ddd');

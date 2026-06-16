@@ -1,6 +1,6 @@
 <?php
 
-namespace Tey\LaravelDDD\Console;
+namespace Laravel\LaravelDDD\Console;
 
 use Illuminate\Console\GeneratorCommand;
 
@@ -12,7 +12,7 @@ class DomainUseCaseMakeCommand extends GeneratorCommand
 
     protected function getStub()
     {
-        return str_contains($this->getNameInput(), 'I') 
+        return str_contains($this->getNameInput(), 'I')
             ? __DIR__.'/../../stubs/ddd/use-case.stub'
             : __DIR__.'/../../stubs/ddd/use-case-impl.stub';
     }
@@ -25,7 +25,7 @@ class DomainUseCaseMakeCommand extends GeneratorCommand
     public function handle()
     {
         $name = $this->getNameInput();
-        
+
         if (!str_ends_with($name, 'UseCase')) {
             $name .= 'UseCase';
         }

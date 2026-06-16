@@ -10,7 +10,7 @@ Laravel-DDD is a toolkit to support domain-driven design (DDD) in Laravel applic
 ## Quick Start
 
 ```bash
-composer require tey/laravel-ddd
+composer require thatobabusi/laravel-ddd
 php artisan ddd:install
 php artisan ddd:config wizard
 ```

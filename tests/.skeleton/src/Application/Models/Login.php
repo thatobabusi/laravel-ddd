@@ -3,7 +3,7 @@
 namespace Application\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Tey\LaravelDDD\Factories\HasDomainFactory;
+use Laravel\LaravelDDD\Factories\HasDomainFactory;
 
 class Login extends Model
 {

@@ -29,7 +29,7 @@ Document cross-model dependencies to define clean domain boundaries:
 
 ### 1.1 Install & Initialize
 ```bash
-composer require tey/laravel-ddd
+composer require thatobabusi/laravel-ddd
 php artisan ddd:install
 php artisan ddd:config wizard
 ```

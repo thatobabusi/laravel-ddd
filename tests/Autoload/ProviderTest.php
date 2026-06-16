@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Artisan;
-use Tey\LaravelDDD\Support\AutoloadManager;
-use Tey\LaravelDDD\Support\DomainCache;
-use Tey\LaravelDDD\Tests\BootsTestApplication;
+use Laravel\LaravelDDD\Support\AutoloadManager;
+use Laravel\LaravelDDD\Support\DomainCache;
+use Laravel\LaravelDDD\Tests\BootsTestApplication;
 
 uses(BootsTestApplication::class);
 

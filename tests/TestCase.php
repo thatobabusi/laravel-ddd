@@ -1,6 +1,6 @@
 <?php
 
-namespace Tey\LaravelDDD\Tests;
+namespace Laravel\LaravelDDD\Tests;
 
 use Illuminate\Contracts\Config\Repository;
 use Illuminate\Database\Eloquent\Factories\Factory;
@@ -9,8 +9,8 @@ use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\File;
 use Orchestra\Testbench\TestCase as Orchestra;
 use Symfony\Component\Process\Process;
-use Tey\LaravelDDD\LaravelDDDServiceProvider;
-use Tey\LaravelDDD\Support\DomainCache;
+use Laravel\LaravelDDD\LaravelDDDServiceProvider;
+use Laravel\LaravelDDD\Support\DomainCache;
 
 class TestCase extends Orchestra
 {
@@ -28,7 +28,7 @@ class TestCase extends Orchestra
             $this->cleanSlate();
 
             Factory::guessFactoryNamesUsing(
-                fn (string $modelName) => 'Tey\\LaravelDDD\\Database\\Factories\\'.class_basename($modelName).'Factory'
+                fn (string $modelName) => 'Laravel\\LaravelDDD\\Database\\Factories\\'.class_basename($modelName).'Factory'
             );
 
             DomainCache::clear();

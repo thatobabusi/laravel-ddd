@@ -1,11 +1,11 @@
 <?php
 
-namespace Tey\LaravelDDD\Support;
+namespace Laravel\LaravelDDD\Support;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\App;
-use Tey\LaravelDDD\ValueObjects\CommandContext;
-use Tey\LaravelDDD\ValueObjects\ObjectSchema;
+use Laravel\LaravelDDD\ValueObjects\CommandContext;
+use Laravel\LaravelDDD\ValueObjects\ObjectSchema;
 
 class GeneratorBlueprint
 {

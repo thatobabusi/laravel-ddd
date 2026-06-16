@@ -1,6 +1,6 @@
 <?php
 
-use Tey\LaravelDDD\Support\DomainResolver;
+use Laravel\LaravelDDD\Support\DomainResolver;
 
 beforeEach(function () {
     $this->artisan('ddd:model', [

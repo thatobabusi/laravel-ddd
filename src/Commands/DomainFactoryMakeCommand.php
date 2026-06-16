@@ -1,11 +1,11 @@
 <?php
 
-namespace Tey\LaravelDDD\Commands;
+namespace Laravel\LaravelDDD\Commands;
 
 use Illuminate\Database\Console\Factories\FactoryMakeCommand;
-use Tey\LaravelDDD\Commands\Concerns\HasDomainStubs;
-use Tey\LaravelDDD\Commands\Concerns\InteractsWithStubs;
-use Tey\LaravelDDD\Commands\Concerns\ResolvesDomainFromInput;
+use Laravel\LaravelDDD\Commands\Concerns\HasDomainStubs;
+use Laravel\LaravelDDD\Commands\Concerns\InteractsWithStubs;
+use Laravel\LaravelDDD\Commands\Concerns\ResolvesDomainFromInput;
 
 class DomainFactoryMakeCommand extends FactoryMakeCommand
 {

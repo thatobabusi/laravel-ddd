@@ -1,12 +1,12 @@
 <?php
 
-namespace Tey\LaravelDDD\Listeners;
+namespace Laravel\LaravelDDD\Listeners;
 
 use Illuminate\Database\Events\MigrationsPruned;
 use Illuminate\Events\Dispatcher;
 use Illuminate\Filesystem\Filesystem;
-use Tey\LaravelDDD\Events\DomainMigrationsPruned;
-use Tey\LaravelDDD\Support\DomainMigration;
+use Laravel\LaravelDDD\Events\DomainMigrationsPruned;
+use Laravel\LaravelDDD\Support\DomainMigration;
 
 class MigrationsPrunedSubscriber
 {

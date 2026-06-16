@@ -1,12 +1,12 @@
 <?php
 
-namespace Tey\LaravelDDD\Commands;
+namespace Laravel\LaravelDDD\Commands;
 
 use Illuminate\Routing\Console\ControllerMakeCommand;
-use Tey\LaravelDDD\Commands\Concerns\ForwardsToDomainCommands;
-use Tey\LaravelDDD\Commands\Concerns\HasDomainStubs;
-use Tey\LaravelDDD\Commands\Concerns\ResolvesDomainFromInput;
-use Tey\LaravelDDD\Support\Path;
+use Laravel\LaravelDDD\Commands\Concerns\ForwardsToDomainCommands;
+use Laravel\LaravelDDD\Commands\Concerns\HasDomainStubs;
+use Laravel\LaravelDDD\Commands\Concerns\ResolvesDomainFromInput;
+use Laravel\LaravelDDD\Support\Path;
 
 class DomainControllerMakeCommand extends ControllerMakeCommand
 {

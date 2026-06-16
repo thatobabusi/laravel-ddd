@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Artisan;
-use Tey\LaravelDDD\Models\DomainModel;
-use Tey\LaravelDDD\Support\Domain;
-use Tey\LaravelDDD\Tests\Fixtures\Enums\Feature;
+use Laravel\LaravelDDD\Models\DomainModel;
+use Laravel\LaravelDDD\Support\Domain;
+use Laravel\LaravelDDD\Tests\Fixtures\Enums\Feature;
 
 beforeEach(function () {
     config([

@@ -1,8 +1,8 @@
 <?php
 
-namespace Tey\LaravelDDD\Commands;
+namespace Laravel\LaravelDDD\Commands;
 
-use Tey\LaravelDDD\Commands\Concerns\HasDomainStubs;
+use Laravel\LaravelDDD\Commands\Concerns\HasDomainStubs;
 
 class DomainValueObjectMakeCommand extends DomainGeneratorCommand
 {

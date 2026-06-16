@@ -4,15 +4,10 @@
 Install via composer:
 
 ```bash
-composer require tey/laravel-ddd
+composer require thatobabusi/laravel-ddd
 ```
 
 > [!IMPORTANT]
-> **Upgrading from `lunarstorm/laravel-ddd` v2?** First update to v2.1.2, then run `ddd:upgrade`:
-> ```bash
-> composer require lunarstorm/laravel-ddd:"^2.1.2"
-> php artisan ddd:upgrade
-> ```
 > See [UPGRADING](../UPGRADING.md) for full details.
 
 ## Initializing

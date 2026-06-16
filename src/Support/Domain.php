@@ -1,8 +1,8 @@
 <?php
 
-namespace Tey\LaravelDDD\Support;
+namespace Laravel\LaravelDDD\Support;
 
-use Tey\LaravelDDD\ValueObjects\DomainObject;
+use Laravel\LaravelDDD\ValueObjects\DomainObject;
 
 class Domain
 {

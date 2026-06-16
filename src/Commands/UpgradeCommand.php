@@ -1,10 +1,10 @@
 <?php
 
-namespace Tey\LaravelDDD\Commands;
+namespace Laravel\LaravelDDD\Commands;
 
 use Illuminate\Console\Command;
 use Symfony\Component\Finder\Finder;
-use Tey\LaravelDDD\Facades\DDD;
+use Laravel\LaravelDDD\Facades\DDD;
 
 use function Laravel\Prompts\confirm;
 
@@ -14,9 +14,9 @@ class UpgradeCommand extends Command
 
     protected $description = 'Upgrade the package configuration and application code for compatibility with the latest version.';
 
-    const OLD_NAMESPACE = 'Lunarstorm\\LaravelDDD';
+    const OLD_NAMESPACE = 'Tey\\LaravelDDD';
 
-    const NEW_NAMESPACE = 'Tey\\LaravelDDD';
+    const NEW_NAMESPACE = 'Laravel\\LaravelDDD';
 
     public function handle()
     {

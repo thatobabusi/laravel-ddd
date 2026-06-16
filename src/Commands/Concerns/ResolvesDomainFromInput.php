@@ -1,12 +1,12 @@
 <?php
 
-namespace Tey\LaravelDDD\Commands\Concerns;
+namespace Laravel\LaravelDDD\Commands\Concerns;
 
 use Illuminate\Support\Str;
 use Symfony\Component\Console\Input\InputOption;
-use Tey\LaravelDDD\Support\Domain;
-use Tey\LaravelDDD\Support\DomainResolver;
-use Tey\LaravelDDD\Support\GeneratorBlueprint;
+use Laravel\LaravelDDD\Support\Domain;
+use Laravel\LaravelDDD\Support\DomainResolver;
+use Laravel\LaravelDDD\Support\GeneratorBlueprint;
 
 use function Laravel\Prompts\suggest;
 

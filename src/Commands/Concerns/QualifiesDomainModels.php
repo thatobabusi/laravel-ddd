@@ -1,6 +1,6 @@
 <?php
 
-namespace Tey\LaravelDDD\Commands\Concerns;
+namespace Laravel\LaravelDDD\Commands\Concerns;
 
 trait QualifiesDomainModels
 {

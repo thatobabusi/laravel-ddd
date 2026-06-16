@@ -3,7 +3,7 @@
 namespace Infrastructure\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Tey\LaravelDDD\Factories\HasDomainFactory;
+use Laravel\LaravelDDD\Factories\HasDomainFactory;
 
 class AppSession extends Model
 {

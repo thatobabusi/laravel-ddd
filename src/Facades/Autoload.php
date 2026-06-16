@@ -1,9 +1,9 @@
 <?php
 
-namespace Tey\LaravelDDD\Facades;
+namespace Laravel\LaravelDDD\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use Tey\LaravelDDD\Support\AutoloadManager;
+use Laravel\LaravelDDD\Support\AutoloadManager;
 
 /**
  * @see AutoloadManager

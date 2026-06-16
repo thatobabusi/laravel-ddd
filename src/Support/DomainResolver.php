@@ -1,9 +1,9 @@
 <?php
 
-namespace Tey\LaravelDDD\Support;
+namespace Laravel\LaravelDDD\Support;
 
 use Illuminate\Support\Str;
-use Tey\LaravelDDD\Enums\LayerType;
+use Laravel\LaravelDDD\Enums\LayerType;
 
 class DomainResolver
 {

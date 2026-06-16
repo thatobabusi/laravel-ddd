@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Artisan;
-use Tey\LaravelDDD\Support\Path;
+use Laravel\LaravelDDD\Support\Path;
 
 use function PHPUnit\Framework\assertMatchesRegularExpression;
 

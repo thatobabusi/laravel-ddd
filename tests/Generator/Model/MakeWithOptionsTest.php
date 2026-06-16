@@ -2,8 +2,8 @@
 
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Config;
-use Tey\LaravelDDD\Support\Domain;
-use Tey\LaravelDDD\Support\Path;
+use Laravel\LaravelDDD\Support\Domain;
+use Laravel\LaravelDDD\Support\Path;
 
 beforeEach(function () {
     Config::set('ddd.domain_path', 'src/Domain');

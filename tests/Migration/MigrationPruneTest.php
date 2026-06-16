@@ -2,8 +2,8 @@
 
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Event;
-use Tey\LaravelDDD\Events\DomainMigrationsPruned;
-use Tey\LaravelDDD\Support\Path;
+use Laravel\LaravelDDD\Events\DomainMigrationsPruned;
+use Laravel\LaravelDDD\Support\Path;
 
 it('prunes domain migrations when schema:dump --prune is called', function () {
     $this->setupTestApplication();

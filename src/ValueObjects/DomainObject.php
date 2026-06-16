@@ -1,10 +1,10 @@
 <?php
 
-namespace Tey\LaravelDDD\ValueObjects;
+namespace Laravel\LaravelDDD\ValueObjects;
 
 use Illuminate\Support\Str;
-use Tey\LaravelDDD\Support\DomainResolver;
-use Tey\LaravelDDD\Support\Path;
+use Laravel\LaravelDDD\Support\DomainResolver;
+use Laravel\LaravelDDD\Support\Path;
 
 class DomainObject
 {

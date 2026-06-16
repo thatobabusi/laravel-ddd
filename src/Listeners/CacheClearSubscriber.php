@@ -1,9 +1,9 @@
 <?php
 
-namespace Tey\LaravelDDD\Listeners;
+namespace Laravel\LaravelDDD\Listeners;
 
 use Illuminate\Events\Dispatcher;
-use Tey\LaravelDDD\Support\DomainCache;
+use Laravel\LaravelDDD\Support\DomainCache;
 
 class CacheClearSubscriber
 {

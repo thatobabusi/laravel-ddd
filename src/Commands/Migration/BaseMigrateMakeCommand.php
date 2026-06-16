@@ -1,6 +1,6 @@
 <?php
 
-namespace Tey\LaravelDDD\Commands\Migration;
+namespace Laravel\LaravelDDD\Commands\Migration;
 
 use Illuminate\Database\Console\Migrations\MigrateMakeCommand;
 use Symfony\Component\Console\Input\InputOption;

@@ -41,19 +41,19 @@ describe('v3 namespace migration', function () {
         // Inject an old namespace reference into the config
         $modified = str_replace(
             "'base_model' => null",
-            "'base_model' => 'Lunarstorm\\LaravelDDD\\Models\\DomainModel'",
+            "'base_model' => 'Tey\\LaravelDDD\\Models\\DomainModel'",
             $original,
         );
         file_put_contents($configPath, $modified);
 
-        expect(file_get_contents($configPath))->toContain('Lunarstorm\LaravelDDD');
+        expect(file_get_contents($configPath))->toContain('Tey\LaravelDDD');
 
         $this->artisan('ddd:upgrade')->execute();
 
         $config = require $configPath;
 
         expect($config['base_model'])
-            ->not->toContain('Lunarstorm')
+            ->not->toContain('Tey')
             ->toContain('Tey\LaravelDDD');
     });
 
@@ -66,18 +66,18 @@ describe('v3 namespace migration', function () {
     it('replaces old namespace in app php files when confirmed', function () {
         $tmpFile = app_path('SomeService.php');
         File::ensureDirectoryExists(app_path());
-        file_put_contents($tmpFile, "<?php\nuse Lunarstorm\\LaravelDDD\\Facades\\DDD;\n");
+        file_put_contents($tmpFile, "<?php\nuse Tey\\LaravelDDD\\Facades\\DDD;\n");
 
         $this->artisan('ddd:upgrade')
             ->expectsConfirmation(
-                'Replace all occurrences of [Lunarstorm\LaravelDDD] with [Tey\LaravelDDD]?',
+                'Replace all occurrences of [Tey\LaravelDDD] with [Laravel\LaravelDDD]?',
                 'yes',
             )
             ->execute();
 
         expect(file_get_contents($tmpFile))
-            ->not->toContain('Lunarstorm\\LaravelDDD')
-            ->toContain('Tey\\LaravelDDD');
+            ->not->toContain('Tey\\LaravelDDD')
+            ->toContain('Laravel\\LaravelDDD');
 
         unlink($tmpFile);
     });
@@ -85,17 +85,17 @@ describe('v3 namespace migration', function () {
     it('skips replacing app files when not confirmed', function () {
         $tmpFile = app_path('SomeService.php');
         File::ensureDirectoryExists(app_path());
-        file_put_contents($tmpFile, "<?php\nuse Lunarstorm\\LaravelDDD\\Facades\\DDD;\n");
+        file_put_contents($tmpFile, "<?php\nuse Tey\\LaravelDDD\\Facades\\DDD;\n");
 
         $this->artisan('ddd:upgrade')
             ->expectsConfirmation(
-                'Replace all occurrences of [Lunarstorm\LaravelDDD] with [Tey\LaravelDDD]?',
+                'Replace all occurrences of [Tey\LaravelDDD] with [Laravel\LaravelDDD]?',
                 'no',
             )
             ->expectsOutputToContain('You will need to update these files manually.')
             ->execute();
 
-        expect(file_get_contents($tmpFile))->toContain('Lunarstorm\\LaravelDDD');
+        expect(file_get_contents($tmpFile))->toContain('Tey\\LaravelDDD');
 
         unlink($tmpFile);
     });

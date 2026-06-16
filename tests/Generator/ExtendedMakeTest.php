@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Config;
-use Tey\LaravelDDD\Support\Domain;
+use Laravel\LaravelDDD\Support\Domain;
 
 it('can generate other objects', function ($type, $objectName, $domainPath, $domainRoot) {
     if (in_array($type, ['class', 'enum', 'interface', 'trait'])) {

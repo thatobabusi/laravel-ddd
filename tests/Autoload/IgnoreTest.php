@@ -4,9 +4,9 @@ use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Str;
 use Symfony\Component\Finder\SplFileInfo;
-use Tey\LaravelDDD\Facades\DDD;
-use Tey\LaravelDDD\Support\DomainCache;
-use Tey\LaravelDDD\Tests\BootsTestApplication;
+use Laravel\LaravelDDD\Facades\DDD;
+use Laravel\LaravelDDD\Support\DomainCache;
+use Laravel\LaravelDDD\Tests\BootsTestApplication;
 
 uses(BootsTestApplication::class);
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace Tey\LaravelDDD\Facades;
+namespace Laravel\LaravelDDD\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use Tey\LaravelDDD\DomainManager;
+use Laravel\LaravelDDD\DomainManager;
 
 /**
  * @see DomainManager
@@ -12,10 +12,10 @@ use Tey\LaravelDDD\DomainManager;
  * @method static ?callable getAutoloadFilter()
  * @method static void resolveObjectSchemaUsing(callable $resolver)
  * @method static string packagePath(string $path = '')
- * @method static \Tey\LaravelDDD\Support\AutoloadManager autoloader()
- * @method static \Tey\LaravelDDD\ConfigManager config()
- * @method static \Tey\LaravelDDD\StubManager stubs()
- * @method static \Tey\LaravelDDD\ComposerManager composer()
+ * @method static \Laravel\LaravelDDD\Support\AutoloadManager autoloader()
+ * @method static \Laravel\LaravelDDD\ConfigManager config()
+ * @method static \Laravel\LaravelDDD\StubManager stubs()
+ * @method static \Laravel\LaravelDDD\ComposerManager composer()
  */
 class DDD extends Facade
 {

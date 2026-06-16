@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\File;
-use Tey\LaravelDDD\Tests\Fixtures\Enums\Feature;
+use Laravel\LaravelDDD\Tests\Fixtures\Enums\Feature;
 
 use function PHPUnit\Framework\assertDirectoryDoesNotExist;
 use function PHPUnit\Framework\assertDirectoryExists;

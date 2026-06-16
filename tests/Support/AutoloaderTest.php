@@ -1,7 +1,7 @@
 <?php
 
-use Tey\LaravelDDD\Support\AutoloadManager;
-use Tey\LaravelDDD\Support\Path;
+use Laravel\LaravelDDD\Support\AutoloadManager;
+use Laravel\LaravelDDD\Support\Path;
 
 beforeEach(function () {
     $this->setupTestApplication();

@@ -1,15 +1,15 @@
 <?php
 
-namespace Tey\LaravelDDD\Commands;
+namespace Laravel\LaravelDDD\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Str;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
-use Tey\LaravelDDD\ComposerManager;
-use Tey\LaravelDDD\Facades\DDD;
-use Tey\LaravelDDD\Support\Layer;
+use Laravel\LaravelDDD\ComposerManager;
+use Laravel\LaravelDDD\Facades\DDD;
+use Laravel\LaravelDDD\Support\Layer;
 
 use function Laravel\Prompts\confirm;
 use function Laravel\Prompts\form;

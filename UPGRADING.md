@@ -1,21 +1,21 @@
 # Upgrading
 
-## From 2.x to 3.0.0
+## From 3.x to 4.0.0
 
 ### Package Rename
-The package has moved from `lunarstorm/laravel-ddd` to `tey/laravel-ddd`.
+The package has moved from `tey/laravel-ddd` to `thatobabusi/laravel-ddd`.
 
 ```bash
-composer remove lunarstorm/laravel-ddd
-composer require tey/laravel-ddd:^3.0
+composer remove tey/laravel-ddd
+composer require thatobabusi/laravel-ddd:^4.0
 ```
 
 ### PHP Namespace Change
-The root PHP namespace has changed from `Lunarstorm\LaravelDDD` to `Tey\LaravelDDD`.
+The root PHP namespace has changed from `Tey\LaravelDDD` to `Laravel\LaravelDDD`.
 
 Find and replace throughout your application:
 ```
-Lunarstorm\LaravelDDD  →  Tey\LaravelDDD
+Tey\LaravelDDD  →  Laravel\LaravelDDD
 ```
 
 ### Re-publish Config (if previously published)
