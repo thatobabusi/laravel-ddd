@@ -1,20 +1,14 @@
 {
     "name": "thatobabusi/laravel-ddd",
     "description": "A Laravel toolkit for Domain Driven Design patterns",
-    "keywords": [
-        "thatobabusi",
-        "laravel",
-        "laravel-ddd",
-        "ddd",
-        "domain driven design"
-    ],
+    "keywords": ["thatobabusi", "laravel", "laravel-ddd", "ddd", "domain driven design"],
     "homepage": "https://github.com/thatobabusi/laravel-ddd",
     "license": "MIT",
     "authors": [
         {
             "name": "Thato Babusi",
-            "email": "thatobabusi@yahoo.com",
-            "role": "Developer"
+            "email": "thato@thatobabusi.com",
+            "homepage": "https://thatobabusi.com"
         }
     ],
     "require": {
