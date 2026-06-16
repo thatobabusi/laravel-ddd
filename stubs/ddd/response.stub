@@ -1,0 +1,17 @@
+<?php
+
+namespace {{ namespace }};
+
+/**
+ * {{ class }} Implementation
+ *
+ * Domain response implementation.
+ */
+class {{ class }} implements I{{ class }}
+{
+    public function toArrayResponse(): array
+    {
+        // TODO: Map DTO fields to API response format
+        return [];
+    }
+}

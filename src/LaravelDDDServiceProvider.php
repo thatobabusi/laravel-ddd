@@ -64,6 +64,18 @@ class LaravelDDDServiceProvider extends PackageServiceProvider
                 Commands\DomainSeederMakeCommand::class,
                 Commands\DomainTraitMakeCommand::class,
                 Commands\Migration\DomainMigrateMakeCommand::class,
+                Commands\MakeDomainCommand::class,
+                Commands\MakeEloquentModelCommand::class,
+                Commands\MakeMapperCommand::class,
+                Commands\MakeRepositoryCommand::class,
+                Commands\MakePolicyCommand::class,
+                Commands\MakeDomainServiceProviderCommand::class,
+                Commands\MakeCommandQueryCommand::class,
+                Commands\MakeFeatureCommand::class,
+                Commands\DomainUseCaseMakeCommand::class,
+                Commands\DomainResponseMakeCommand::class,
+                Commands\DomainServiceMakeCommand::class,
+                Commands\DomainActionMakeCommand::class,
             ]);
 
         if ($this->app->runningUnitTests()) {

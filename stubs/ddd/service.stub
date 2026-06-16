@@ -1,0 +1,13 @@
+<?php
+
+namespace {{ namespace }};
+
+/**
+ * {{ class }} Implementation
+ *
+ * Domain service implementation.
+ */
+class {{ class }} implements I{{ class }}
+{
+    // TODO: Implement domain service logic here
+}

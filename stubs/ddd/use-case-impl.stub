@@ -1,0 +1,13 @@
+<?php
+
+namespace {{ namespace }};
+
+/**
+ * {{ class }} Implementation
+ *
+ * Use Case Implementation.
+ */
+class {{ class }} implements {{ class }}Interface
+{
+    // TODO: Inject dependencies and implement execute()
+}

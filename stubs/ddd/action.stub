@@ -1,0 +1,16 @@
+<?php
+
+namespace {{ namespace }};
+
+/**
+ * {{ class }} Action
+ *
+ * Domain action for business logic execution.
+ */
+class {{ class }}
+{
+    public function execute(): void
+    {
+        // TODO: Implement domain action logic here
+    }
+}

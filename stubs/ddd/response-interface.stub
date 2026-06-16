@@ -1,0 +1,16 @@
+<?php
+
+namespace {{ namespace }};
+
+/**
+ * {{ class }} Interface
+ *
+ * Domain response contract.
+ */
+interface {{ class }}
+{
+    /**
+     * Convert the response to an array for API output.
+     */
+    public function toArrayResponse(): array;
+}

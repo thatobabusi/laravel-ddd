@@ -140,34 +140,47 @@ class MakeFeatureCommand extends Command
     {
         $this->section('Generating');
 
-        // Create directories
-        $this->createDirectories($folder);
+        // Note: Using forward-slash syntax to ensure generators respect sub-folders
+        if ($answers['with_request']) {
+            $this->call('ddd:request', ['name' => "{$folder}/{$prefix}Request"]);
+        }
 
-        // Generate files using existing commands
-        $this->call('ddd:request', ['name' => "{$prefix}Request"]) if $answers['with_request'];
-        // ... call other generators
-        // For now, we're showing the structure. In practice, call each generator command.
+        $this->call('ddd:controller', ['name' => "{$folder}/{$prefix}Action", '--invokable' => true]);
+        $this->call('ddd:use-case', ['name' => "{$folder}/{$prefix}"]);
+        
+        if ($answers['service_input_dto']) {
+            $this->call('ddd:dto', ['name' => "{$folder}/Input/{$prefix}ServiceInput"]);
+        }
+        $this->call('ddd:service', ['name' => "{$folder}/{$prefix}Service"]);
+
+        if ($answers['repository_input_dto']) {
+            $this->call('ddd:dto', ['name' => "{$folder}/Repositories/Input/{$prefix}RepositoryInput"]);
+        }
+        $this->call('ddd:repository', ['name' => "{$folder}/{$prefix}Repository"]);
+
+        $this->call('ddd:dto', ['name' => "{$folder}/Services/Output/{$prefix}Output"]);
+        $this->call('ddd:response', ['name' => "{$folder}/{$prefix}"]);
+
+        if ($answers['with_value_objects']) {
+            $this->info("Creating Vo folder in Domain/{$folder}/Vo...");
+        }
+
+        if ($answers['with_entity']) {
+            $this->call('ddd:class', ['name' => "{$folder}/Entities/{$prefix}Entity"]);
+        }
+
+        if ($answers['with_eloquent_model']) {
+            $this->call('ddd:eloquent-model', ['name' => "{$folder}/{$prefix}Model"]);
+        }
 
         $this->info('✔ All files created successfully');
     }
 
-    protected function createDirectories(string $folder): void
+    protected function section(string $title): void
     {
-        $directories = [
-            "app/Http/Requests/Api/V1/{$folder}",
-            "app/Http/Controllers/Api/V1/{$folder}",
-            "app/Http/Responses/Api/V1/{$folder}",
-            "app/UseCases/{$folder}",
-            "app/Domain/{$folder}/Services/Output",
-            "app/Domain/{$folder}/Repositories/Input",
-            "app/Domain/{$folder}/Vo",
-            "app/Infra/{$folder}/Services",
-            "app/Infra/{$folder}/Repositories",
-        ];
-
-        foreach ($directories as $dir) {
-            $this->files->makeDirectory($dir, 0755, true, true);
-        }
+        $this->line('');
+        $this->line("  <fg=white;bg=blue;options=bold> {$title} </>");
+        $this->line('');
     }
 
     protected function showBindingCode(string $prefix, string $folder, array $answers): void

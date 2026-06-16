@@ -1,0 +1,13 @@
+<?php
+
+namespace {{ namespace }};
+
+/**
+ * {{ class }} Interface
+ *
+ * Use Case Contract.
+ */
+interface {{ class }}Interface
+{
+    // public function execute(...$args);
+}

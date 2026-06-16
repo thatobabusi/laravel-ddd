@@ -1,0 +1,13 @@
+<?php
+
+namespace {{ namespace }};
+
+/**
+ * {{ class }} Interface
+ *
+ * Domain service contract.
+ */
+interface {{ class }}
+{
+    // public function execute(...$args);
+}
