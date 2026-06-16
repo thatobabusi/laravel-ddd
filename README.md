@@ -1,4 +1,4 @@
-# Domain Driven Design Toolkit for Laravel
+# Laravel Domain Driven Design Toolkit
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/thatobabusi/laravel-ddd.svg?style=flat-square)](https://packagist.org/packages/thatobabusi/laravel-ddd)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/thatobabusi/laravel-ddd/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/thatobabusi/laravel-ddd/actions?query=workflow%3Arun-tests+branch%3Amain)
