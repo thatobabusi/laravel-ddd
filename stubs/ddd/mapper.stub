@@ -12,25 +12,32 @@ class {{ class }}
 {
     /**
      * Map from Eloquent model to Domain entity
+     *
+     * TODO: Implement the mapping logic
+     * Example:
+     *   return new DomainEntity(
+     *       id: $eloquentModel->id,
+     *       name: $eloquentModel->name,
+     *   );
      */
     public function toDomain(/* $eloquentModel */)
     {
-        // Example:
-        // return new DomainEntity(
-        //     id: $eloquentModel->id,
-        //     name: $eloquentModel->name,
-        // );
+        // TODO: Map Eloquent model to domain entity
     }
 
     /**
      * Map from Domain entity to Eloquent model (array format for create/update)
+     *
+     * TODO: Implement the mapping logic
+     * Example:
+     *   return [
+     *       'name' => $domainEntity->name,
+     *       'email' => $domainEntity->email,
+     *   ];
      */
     public function toEloquent(/* $domainEntity */): array
     {
-        // Example:
-        // return [
-        //     'name' => $domainEntity->name,
-        //     'email' => $domainEntity->email,
-        // ];
+        // TODO: Map domain entity to Eloquent model attributes
+        return [];
     }
 }

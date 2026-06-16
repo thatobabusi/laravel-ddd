@@ -15,9 +15,31 @@ php artisan ddd:install
 php artisan ddd:config wizard
 ```
 
-## Scaffold a Bounded-Context (New!)
+## All-in-One Feature Wizard (NEW!)
 
-Generate a complete domain structure with all layers:
+**Generate a complete DDD feature in seconds:**
+
+```bash
+php artisan ddd:make:feature ForUserLogin --folder=Authentication
+```
+
+**Generates (10+ files automatically):**
+- Request class with validation
+- Action (invokable controller)
+- UseCase (interface + implementation)
+- Domain Service (interface + implementation)
+- Repository (interface + implementation)
+- Output DTO
+- Response (interface + implementation)
+- **Auto-prints:** Exact binding code for `AppServiceProvider::register()`
+- **Auto-prints:** Exact route definition for `routes/api.php`
+- **All files include TODO markers** showing exactly what to implement
+
+See [Quick Start Wizard](docs/QUICK-START-WIZARD.md) for complete guide, real-world examples, and advanced options.
+
+## Scaffold a Bounded-Context (Traditional Approach)
+
+Alternatively, use granular commands for full control:
 
 ```bash
 php artisan ddd:make:domain UserManagement
@@ -31,6 +53,17 @@ php artisan ddd:command-query UserManagement:GetUserQuery --query
 ```
 
 See [Scaffolding Guide](docs/SCAFFOLDING.md) for complete workflow.
+
+## Command Comparison
+
+| Approach | Speed | Flexibility | Learning Curve |
+|----------|-------|-------------|----------------|
+| **Feature Wizard** `ddd:make:feature` | ⚡ 2 min | Good (answer 9 questions) | Beginner |
+| **Granular Commands** `ddd:*` | 🐢 10 min | Excellent (build incrementally) | Intermediate |
+
+**Use the wizard for:** Creating a feature from scratch quickly.  
+**Use granular commands for:** Fine-grained control, incremental building, or customization.
+
 
 ## Documentation
 
@@ -67,17 +100,18 @@ Complete documentation is organized into focused guides:
 
 ## Key Features
 
-- ✅ Generate domain objects outside `App\*` with `ddd:*` commands.
-- ✅ Support for nested objects and subdomains (dot notation).
-- ✅ Scaffold bounded-contexts with all four layers (`Domain`, `Application`, `Presentation`, `Infrastructure`).
-- ✅ Generate Eloquent models, mappers, repositories, policies, and service providers.
-- ✅ CQRS support: Commands and Queries with dedicated generators.
-- ✅ Configurable application layer (controllers, requests, middleware).
-- ✅ Custom layers (Infrastructure, Integrations, etc).
-- ✅ Auto-discovery of providers, commands, policies, factories, migrations, listeners.
-- ✅ Event-driven architecture with decoupled domains.
-- ✅ Production autoloading optimization.
-- ✅ Customizable stubs.
+- ✅ **All-in-one feature wizard:** `ddd:make:feature` generates complete DDD features with intelligent prompting
+- ✅ **TODO-driven scaffolding:** All generated files have clear markers showing what to implement
+- ✅ **Auto-bindings & routes:** Wizard prints exact code for AppServiceProvider and routes/api.php
+- ✅ **11 generators:** domain, eloquent-model, mapper, repository, policy, provider, command, query, use-case, response, action
+- ✅ **Generate domain objects** outside `App\*` with `ddd:*` commands
+- ✅ **Support for nested objects** and subdomains (dot notation)
+- ✅ **Configurable application layer** (controllers, requests, middleware)
+- ✅ **Custom layers** (Infrastructure, Integrations, etc)
+- ✅ **Auto-discovery** of providers, commands, policies, factories, migrations, listeners
+- ✅ **Event-driven architecture** with decoupled domains
+- ✅ **Production autoloading optimization**
+- ✅ **Customizable stubs**
 
 ## Version Compatibility
 
@@ -89,7 +123,50 @@ Complete documentation is organized into focused guides:
 
 See [UPGRADING](UPGRADING.md) for migration details.
 
-## Example: Complete Domain
+## Example: Complete Feature (Feature Wizard)
+
+```bash
+# Interactive wizard
+php artisan ddd:make:feature ForCreatePost --folder=Blog
+
+# Or with options
+php artisan ddd:make:feature ForCreatePost \
+  --folder=Blog \
+  --with-entity \
+  --with-eloquent-model
+```
+
+**Output:**
+```
+✔ CREATED app/Http/Requests/Api/V1/Blog/ForCreatePostRequest.php
+✔ CREATED app/Http/Controllers/Api/V1/Blog/ForCreatePostAction.php
+✔ CREATED app/UseCases/Blog/IForCreatePostUseCase.php
+✔ CREATED app/UseCases/Blog/ForCreatePostUseCase.php
+✔ CREATED app/Domain/Blog/Services/IForCreatePostService.php
+✔ CREATED app/Infra/Blog/Services/ForCreatePostService.php
+✔ CREATED app/Domain/Blog/Repositories/IForCreatePostRepository.php
+✔ CREATED app/Infra/Blog/Repositories/ForCreatePostRepository.php
+✔ CREATED app/Domain/Blog/Services/Output/ForCreatePostOutput.php
+✔ CREATED app/Http/Responses/Api/V1/Blog/IForCreatePostResponse.php
+✔ CREATED app/Http/Responses/Api/V1/Blog/ForCreatePostResponse.php
+
+── Add to AppServiceProvider::register() ─────────────────────
+$this->app->bind(App\UseCases\Blog\IForCreatePostUseCase::class, ...);
+$this->app->bind(App\Domain\Blog\Services\IForCreatePostService::class, ...);
+$this->app->bind(App\Domain\Blog\Repositories\IForCreatePostRepository::class, ...);
+$this->app->bind(App\Http\Responses\Api\V1\Blog\IForCreatePostResponse::class, ...);
+
+── Add to routes/api.php ─────────────────────────────────────
+Route::post('/for-create-post', \App\Http\Controllers\Api\V1\Blog\ForCreatePostAction::class);
+
+Done! All files generated successfully.
+```
+
+Each generated file has **TODO comments** showing exactly what to implement.
+
+See [Real-World Examples](docs/EXAMPLES.md) and [Quick Start Wizard](docs/QUICK-START-WIZARD.md) for complete walkthrough.
+
+## Example: Granular Approach (Full Control)
 
 ```bash
 # Scaffold bounded-context
@@ -115,7 +192,6 @@ php artisan ddd:listener Invoicing:HandleInvoiceCreated
 php artisan ddd:provider Invoicing:InvoicingServiceProvider
 ```
 
-See [Real-World Examples](docs/EXAMPLES.md) and [Scaffolding Guide](docs/SCAFFOLDING.md) for full working examples.
 
 ## Credits
 

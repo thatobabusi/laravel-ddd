@@ -18,7 +18,7 @@ class {{ class }}
      */
     public function view(/* User $user, YourEntity $entity */): bool
     {
-        // return $user->id === $entity->user_id || $user->isAdmin();
+        // TODO: Implement view authorization logic
         return true;
     }
 
@@ -27,7 +27,7 @@ class {{ class }}
      */
     public function create(/* User $user */): bool
     {
-        // return $user->isVerified();
+        // TODO: Implement create authorization logic
         return true;
     }
 
@@ -36,7 +36,7 @@ class {{ class }}
      */
     public function update(/* User $user, YourEntity $entity */): bool
     {
-        // return $user->id === $entity->user_id && !$entity->isLocked();
+        // TODO: Implement update authorization logic
         return true;
     }
 
@@ -45,7 +45,7 @@ class {{ class }}
      */
     public function delete(/* User $user, YourEntity $entity */): bool
     {
-        // return $user->id === $entity->user_id && $user->isVerified();
+        // TODO: Implement delete authorization logic
         return true;
     }
 }

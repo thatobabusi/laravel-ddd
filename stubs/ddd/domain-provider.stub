@@ -15,16 +15,19 @@ class {{ class }} extends ServiceProvider
     /**
      * Register domain services
      *
-     * Bind repository interfaces to implementations, repository interfaces to concrete
-     * repository classes, and any other domain-level bindings.
+     * Bind repository interfaces to implementations, actions to handlers,
+     * and any other domain-level service bindings.
+     *
+     * TODO: Add your bindings here
+     * Example:
+     *   $this->app->bind(
+     *       \Domain\YourDomain\Contracts\YourRepositoryInterface::class,
+     *       \Domain\YourDomain\Infrastructure\YourRepository::class
+     *   );
      */
     public function register(): void
     {
-        // Example:
-        // $this->app->bind(
-        //     \Domain\YourDomain\Contracts\YourRepositoryInterface::class,
-        //     \Domain\YourDomain\Application\Repositories\YourRepository::class
-        // );
+        // TODO: Add bindings
     }
 
     /**

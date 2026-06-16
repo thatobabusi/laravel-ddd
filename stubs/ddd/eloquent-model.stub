@@ -16,6 +16,10 @@ class {{ class }} extends Model
     use HasFactory;
 
     protected $fillable = [
-        //
+        // TODO: Add fillable fields
+    ];
+
+    protected $casts = [
+        // TODO: Add field casts (e.g., 'created_at' => 'datetime')
     ];
 }

@@ -2,36 +2,61 @@
 
 Complete, navigable reference for all documentation.
 
+## 🆕 What's New in v4.0?
+
+**Feature Wizard:** Generate complete DDD features in seconds with intelligent prompting.
+```bash
+php artisan ddd:make:feature ForUserLogin --folder=Authentication
+```
+Automatically creates Request + Action + UseCase + Service + Repository + DTO + Response with TODO markers and auto-printed bindings. See [Quick Start Wizard](QUICK-START-WIZARD.md).
+
+**New Generators:**
+- `ddd:make:feature` — All-in-one feature scaffolding
+- `ddd:make:domain` — Bounded-context with 4 layers
+- `ddd:use-case` — UseCase interface + implementation
+- `ddd:response` — Response interface + implementation
+- `ddd:service` — Service interface + implementation
+- `ddd:action` — Domain actions
+- `ddd:eloquent-model`, `ddd:repository`, `ddd:mapper`, `ddd:policy`, `ddd:provider`, `ddd:command-query` — Existing generators now working smoothly
+
+**20+ New Documentation Files:**
+- Comprehensive guides for all features
+- Real-world examples (Invoicing, Payment domains)
+- Security, performance, and migration guides
+
+---
+
 ## Quick Navigation
 
-### 🚀 Getting Started (5 min)
+### 🚀 Getting Started (5-10 min)
 1. [Installation & Setup](INSTALLATION.md) — Install and initialize the package.
-2. [Configuration](CONFIGURATION.md) — Configure domains, layers, and generate stubs.
+2. [Quick Start Wizard](QUICK-START-WIZARD.md) ⭐ **NEW** — Generate your first feature in 2 minutes.
+3. [Configuration](CONFIGURATION.md) — Configure domains, layers, and namespaces.
 
-### 💻 Core Usage (15 min)
-3. [Available Commands](COMMANDS.md) — Reference for all `ddd:*` commands.
-4. [Advanced Usage](ADVANCED_USAGE.md) — Nested objects, subdomains, custom resolvers, layers.
-5. [Scaffolding & Domain Structure](SCAFFOLDING.md) — **NEW!** Bounded-contexts, layered architecture, CQRS.
+### 💻 Core Usage (15-30 min)
+4. [Available Commands](COMMANDS.md) — Reference for all `ddd:*` commands.
+5. [Scaffolding & Domain Structure](SCAFFOLDING.md) — Bounded-contexts, layered architecture, granular approach.
+6. [Advanced Usage](ADVANCED_USAGE.md) — Nested objects, subdomains, custom resolvers, layers.
 
-### 🏗️ Building with DDD (30-45 min)
-6. [Real-World Examples](EXAMPLES.md) — Complete working domains (Invoicing, Payment, testing).
-7. [Events & Listeners](EVENTS_AND_LISTENERS.md) — Event-driven architecture and decoupled domains.
-8. [Migrating Existing Apps](MIGRATION.md) — Step-by-step refactoring guide.
+### 🏗️ Building with DDD (30-60 min)
+7. [Real-World Examples](EXAMPLES.md) — Complete working domains (Invoicing, Payment, testing).
+8. [Events & Listeners](EVENTS_AND_LISTENERS.md) — Event-driven architecture and decoupled domains.
+9. [Migrating Existing Apps](MIGRATION.md) — Step-by-step refactoring guide.
 
-### ⚙️ Optimization & Customization (20 min)
-9. [Customizing Stubs](STUBS.md) — Publish and override generated templates.
-10. [Autoloading & Discovery](AUTOLOADING.md) — Auto-discovery of providers, commands, policies, etc.
-11. [Performance & Optimization](PERFORMANCE.md) — Query optimization, caching, production tuning.
+### ⚙️ Optimization & Customization (15-25 min)
+10. [Customizing Stubs](STUBS.md) — Publish and override generated templates.
+11. [Autoloading & Discovery](AUTOLOADING.md) — Auto-discovery of providers, commands, policies, etc.
+12. [Performance & Optimization](PERFORMANCE.md) — Query optimization, caching, production tuning.
 
-### 🔒 Quality & Security (15 min)
-12. [Security Best Practices](SECURITY.md) — Authorization, validation, encryption, audit logging.
-13. [Testing](TESTING.md) — Testing domain objects and patterns.
+### 🔒 Quality & Security (10-20 min)
+13. [Security Best Practices](SECURITY.md) — Authorization, validation, encryption, audit logging.
+14. [Testing](TESTING.md) — Testing domain objects and patterns.
 
-### 📚 Reference & Support (10 min)
-14. [Version Compatibility](VERSION_COMPATIBILITY.md) — Laravel/PHP matrix and upgrading.
-15. [Troubleshooting](TROUBLESHOOTING.md) — Common issues and solutions.
-16. [FAQ](FAQ.md) — Frequently asked questions.
-17. [Contributing](CONTRIBUTING.md) — How to contribute.
+### 📚 Reference & Support (10-15 min)
+15. [Version Compatibility](VERSION_COMPATIBILITY.md) — Laravel/PHP matrix and upgrading.
+16. [Troubleshooting](TROUBLESHOOTING.md) — Common issues and solutions.
+17. [FAQ](FAQ.md) — Frequently asked questions.
+18. [Contributing](CONTRIBUTING.md) — How to contribute.
 
 ---
 
@@ -39,14 +64,13 @@ Complete, navigable reference for all documentation.
 
 ### I'm starting a new DDD project
 1. [Installation & Setup](INSTALLATION.md)
-2. [Configuration](CONFIGURATION.md)
-3. [Scaffolding & Domain Structure](SCAFFOLDING.md)
+2. [Quick Start Wizard](QUICK-START-WIZARD.md)
+3. [Configuration](CONFIGURATION.md)
 4. [Real-World Examples](EXAMPLES.md)
 
-### I want to build a complete bounded-context
-1. [Scaffolding & Domain Structure](SCAFFOLDING.md)
-2. [Real-World Examples](EXAMPLES.md)
-3. [Testing](TESTING.md)
+### I want to build a feature fast
+1. [Quick Start Wizard](QUICK-START-WIZARD.md)
+2. Done! Fill in TODOs.
 
 ### I want to learn DDD patterns
 1. [Real-World Examples](EXAMPLES.md)
@@ -75,124 +99,20 @@ Complete, navigable reference for all documentation.
 
 | Category | Files | Time |
 |----------|-------|------|
-| **Getting Started** | Installation, Configuration, Scaffolding | 5 min |
-| **Core Usage** | Commands, Advanced Usage | 15 min |
-| **Building** | Examples, Events, Migration | 45 min |
-| **Optimization** | Stubs, Autoloading, Performance | 20 min |
-| **Quality** | Security, Testing | 15 min |
-| **Reference** | Compatibility, Troubleshooting, FAQ | 10 min |
-
----
-
-## New to DDD?
-
-Start here for a guided introduction:
-
-1. **What is DDD?** → Read [Real-World Examples](EXAMPLES.md)
-2. **How does it work in Laravel?** → Follow [Installation & Setup](INSTALLATION.md)
-3. **Show me the structure** → Jump to [Scaffolding & Domain Structure](SCAFFOLDING.md)
-4. **How do I scaffold?** → See the commands in [Scaffolding Guide](SCAFFOLDING.md)
-5. **Complete example** → Review [Real-World Examples](EXAMPLES.md)
-6. **What about events?** → Read [Events & Listeners](EVENTS_AND_LISTENERS.md)
-
----
-
-## Common Tasks
-
-### Generate a new bounded-context
-→ [Scaffolding & Domain Structure](SCAFFOLDING.md) → `ddd:make:domain`
-
-### Create an Eloquent model (Infrastructure)
-→ [Scaffolding & Domain Structure](SCAFFOLDING.md) → `ddd:eloquent-model`
-
-### Create a repository with interface
-→ [Scaffolding & Domain Structure](SCAFFOLDING.md) → `ddd:repository`
-
-### Create a mapper (transform data between layers)
-→ [Scaffolding & Domain Structure](SCAFFOLDING.md) → `ddd:mapper`
-
-### Create a command or query (CQRS)
-→ [Scaffolding & Domain Structure](SCAFFOLDING.md) → `ddd:command-query`
-
-### Create a service provider for bindings
-→ [Scaffolding & Domain Structure](SCAFFOLDING.md) → `ddd:provider`
-
-### Add validation to my DTO
-→ [Real-World Examples](EXAMPLES.md) → DTO Validation section
-
-### Test my domain object
-→ [Testing](TESTING.md)
-
-### Move my existing app to DDD
-→ [Migrating Existing Apps](MIGRATION.md)
-
-### Optimize autoloading in production
-→ [Performance & Optimization](PERFORMANCE.md) → Production Autoloading
-
-### Handle cross-domain communication
-→ [Events & Listeners](EVENTS_AND_LISTENERS.md) → Cross-Domain Communication
-
-### Customize how objects are generated
-→ [Customizing Stubs](STUBS.md)
-
-### Find out which version I need
-→ [Version Compatibility](VERSION_COMPATIBILITY.md)
-
-### Troubleshoot an issue
-→ [Troubleshooting](TROUBLESHOOTING.md) or [FAQ](FAQ.md)
-
----
-
-## Quick Links
-
-- [Main README](../README.md) — Package overview
-- [UPGRADING](../UPGRADING.md) — Version upgrade guide
-- [CHANGELOG](../CHANGELOG.md) — What's new
-- [License](../LICENSE.md) — MIT License
-
----
-
-## Document Relationships
-
-```
-Installation → Configuration → Scaffolding
-    ↓
-Commands (Reference)
-    ↓
-Advanced Usage ← Real-World Examples
-    ↓
-Events & Listeners
-    ↓
-Testing ← Migrating Existing Apps
-    ↓
-Performance & Optimization
-    ↓
-Security Best Practices
-    ↓
-Troubleshooting / FAQ
-```
+| **Getting Started** | Installation, Configuration, Wizard | 10 min |
+| **Core Usage** | Commands, Scaffolding, Advanced | 30 min |
+| **Building** | Examples, Events, Migration | 60 min |
+| **Optimization** | Stubs, Autoloading, Performance | 25 min |
+| **Quality** | Security, Testing | 20 min |
+| **Reference** | Compatibility, Troubleshooting, FAQ | 15 min |
 
 ---
 
 ## Estimated Reading Times
 
 - **Complete guide:** 2–3 hours
-- **Essentials (Getting Started + Scaffolding + Examples):** 45 minutes
+- **Essentials (Getting Started + Wizard + Examples):** 45 minutes
 - **Quick reference:** 10 minutes (command list)
-
----
-
-## What's New?
-
-### 📦 Phase 5 Additions (Orphail-Inspired)
-- **`ddd:make:domain`** — Scaffold bounded-contexts with all four layers
-- **`ddd:eloquent-model`** — Create infrastructure-layer Eloquent models
-- **`ddd:repository`** — Generate repository interface + implementation
-- **`ddd:mapper`** — Create data mappers between layers
-- **`ddd:policy`** — Generate domain authorization policies
-- **`ddd:provider`** — Create service providers for dependency binding
-- **`ddd:command-query`** — Generate CQRS commands and queries
-- **[Scaffolding & Domain Structure](SCAFFOLDING.md)** — Complete guide to the new commands
 
 ---
 
