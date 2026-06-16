@@ -1,9 +1,9 @@
 # Domain Driven Design Toolkit for Laravel
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/tey/laravel-ddd.svg?style=flat-square)](https://packagist.org/packages/tey/laravel-ddd)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/jaspertey/laravel-ddd/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/jaspertey/laravel-ddd/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/jaspertey/laravel-ddd/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/jaspertey/laravel-ddd/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/tey/laravel-ddd.svg?style=flat-square)](https://packagist.org/packages/tey/laravel-ddd)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/thatobabusi/laravel-ddd.svg?style=flat-square)](https://packagist.org/packages/thatobabusi/laravel-ddd)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/thatobabusi/laravel-ddd/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/thatobabusi/laravel-ddd/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/thatobabusi/laravel-ddd/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/thatobabusi/laravel-ddd/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/thatobabusi/laravel-ddd.svg?style=flat-square)](https://packagist.org/packages/thatobabusi/laravel-ddd)
 
 Laravel-DDD is a toolkit to support domain-driven design (DDD) in Laravel applications. One of the pain points when adopting DDD is the inability to use Laravel's native `make` commands to generate objects outside the `App\*` namespace. This package aims to fill the gaps by providing equivalent commands such as `ddd:model`, `ddd:dto`, `ddd:view-model` and many more.
 
