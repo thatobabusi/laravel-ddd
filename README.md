@@ -115,11 +115,12 @@ Complete documentation is organized into focused guides:
 
 ## Version Compatibility
 
-| Laravel | LaravelDDD | PHP | Status |
-|---------|-----------|-----|--------|
-| 11.x – 13.x | 3.x | 8.3+ | **Latest** |
-| 11.44.x+ | 2.x | 8.3+ | Current |
-| 9.x – 11.x | 0.x – 1.x | 8.1+ | Legacy |
+| Laravel     | LaravelDDD | PHP  | Status                    |
+|-------------|------------|------|---------------------------|
+| ^13.x       | 4.x        | 8.4+ | **Current**  Experimental _(active WIP MVP)_                 |
+| 11.x – 13.x | 3.x        | 8.3+ | **Latest** Maintained by [Jasper Tey](https://github.com/JasperTey) - [Laravel DDD](https://github.com/jaspertey/laravel-ddd) |
+| 11.44.x+    | 2.x        | 8.3+ | Legacy Maintained by [Jasper Tey](https://github.com/JasperTey) - [Laravel DDD](https://github.com/jaspertey/laravel-ddd)     |
+| 9.x – 11.x  | 0.x – 1.x  | 8.1+ | Legacy                    |
 
 See [UPGRADING](UPGRADING.md) for migration details.
 
