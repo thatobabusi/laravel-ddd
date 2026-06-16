@@ -195,8 +195,10 @@ php artisan ddd:provider Invoicing:InvoicingServiceProvider
 
 ## Credits
 
-- [Jasper Tey](https://github.com/JasperTey)
-- [Orphail DDD Inspiration](https://github.com/Orphail/laravel-ddd)
+- [Jasper Tey](https://github.com/JasperTey) - [Laravel DDD](https://github.com/jaspertey/laravel-ddd)
+- [Dani Martinez](https://github.com/Orphail) - [Orphail DDD](https://github.com/Orphail/laravel-ddd)
+- [Imran Ahmed](https://github.com/imran-ahmed-optilius) - [Ahmed Laravel DDD Maker](https://github.com/imran-ahmed-optilius/laravel-ddd-maker)
+- [Spatie](https://github.com/spatie) - [Laravel packages best practices](https://github.com/spatie/package-skeleton-laravel)
 - [All Contributors](../../contributors)
 
 ## License

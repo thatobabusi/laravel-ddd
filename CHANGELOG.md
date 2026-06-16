@@ -169,10 +169,10 @@ That's it! No breaking changes, full backward compatibility.
 
 ## Credits
 
-- **Orphail/laravel-ddd** - Inspired bounded-context scaffolding patterns
-- **Imran Ahmed/laravel-ddd-maker** - Inspired feature wizard UX and TODO-driven development
-- **Spatie** - Laravel packages best practices
-- **Jasper Tey** - Original package author
+- [Jasper Tey](https://github.com/JasperTey) - [Laravel DDD](https://github.com/jaspertey/laravel-ddd)
+- [Dani Martinez](https://github.com/Orphail) - [Orphail DDD](https://github.com/Orphail/laravel-ddd)
+- [Imran Ahmed](https://github.com/imran-ahmed-optilius) - [Ahmed Laravel DDD Maker](https://github.com/imran-ahmed-optilius/laravel-ddd-maker)
+- [Spatie](https://github.com/spatie) - [Laravel packages best practices](https://github.com/spatie/package-skeleton-laravel)
 
 ---
 
